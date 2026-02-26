@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+/* HEADER PROFESIONAL */
+.header-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #111;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+.header-principal .logo {
+    font-size: 42px; /* Más grande */
+    font-weight: 900;
+    color: #f4c542;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.nav-main a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-main a:hover {
+    color: #f4c542;
+}
+
+.btn-reservar {
+    background: #f4c542;
+    border: none;
+    padding: 12px 26px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reservar:hover {
+    background: #e0b830;
+    transform: scale(1.05);
+}
+
+.btn-instagram {
+    background: #E1306C;
+    border: none;
+    padding: 12px 26px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    margin-left: 12px;
+}
+
+.btn-instagram:hover {
+    background: #C13584;
+    transform: scale(1.05);
+}
+
+
+/* ESTILO DEL NOMBRE DE MARCA */
+.logo {
+    font-size: 42px;                  /* Tamaño grande para destacar */
+    font-weight: 900;                 /* Negrita fuerte */
+    color: #f4c542;                   /* Color llamativo */
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* Sombra suave para profundidad */
+    letter-spacing: 1px;              /* Espacio entre letras */
+}
+
+/* Opcional: para un efecto de versalitas */
+.logo.versalitas {
+    font-variant: small-caps;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://siempreauto.com/wp-content/uploads/sites/9/2023/08/2024-Honda-CR-V-Sport-Touring.jpeg?w=1200");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* BOTÓN */
+button {
+    background: #f4c542;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e0b830;
+    transform: scale(1.05);
+}
+
+/* VEHÍCULOS */
+#vehiculos {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                #f5f7fa; /* color base */
+}
+
+/* Título de Vehículos Disponibles - Profesional y Claro */
+.vehiculos-titulo {
+    font-size: 36px;                  /* Tamaño grande para jerarquía visual */
+    font-weight: 700;                 /* Más peso para destacar */
+    color: #f4f4f4;                   /* Texto muy claro para buen contraste */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9); /* Sombra sutil para lectura */
+    margin-bottom: 25px;
+    letter-spacing: 1px;              /* Espacio entre letras para mejor lectura */
+    font-family: 'Poppins', sans-serif; /* Tipografía limpia y profesional */
+}
+.contenedor-autos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.carro {
+    background: white;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.carro:hover {
+    transform: translateY(-10px);
+}
+
+.carro img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carro:hover img {
+    transform: scale(1.05);
+}
+
+.carro h3 {
+    margin: 15px 0 5px;
+}
+
+.carro p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+
+/* CONTACTO */
+#contacto {
+    background: #111;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* HAMBURGUESA Y MENÚ RESPONSIVE */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #f4c542;
+    user-select: none;
+}
+
+/* Versión normal (PC) */
+.nav-main {
+    display: flex;
+    gap: 18px;
+}
+
+/* -------------------------------------
+   MÓVIL ─ ocultar menú por default
+-------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;          /* mostrar hamburguesa */
+    }
+
+    .nav-main {
+        display: none;           /* ocultar menú en móvil */
+        flex-direction: column;
+        width: 100%;
+        background: #111;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-main.show {
+        display: flex;           /* mostrar cuando JS lo activa */
+    }
+
+    .nav-main a {
+        padding: 12px 0;
+        font-size: 18px;
+        color: white;
+    }
+
+    .btn-reservar-mobile {
+        background: #f4c542;
+        color: black;
+        font-weight: bold;
+        border-radius: 6px;
+        margin-top: 8px;
+        padding: 10px 20px;
+    }
+
+    
+}
+
+/* ===================== */
+/* HEADER RESPONSIVE MEJORADO */
+/* ===================== */
+
+@media screen and (max-width: 768px) {
+
+    .header-principal {
+        display: flex;
+        justify-content: space-evenly; /* Espacio uniforme entre logo, enlaces y botón */
+        align-items: center;           /* Alineación vertical correcta */
+        flex-wrap: wrap;               /* Permite que no se bajen elementos si falta espacio */
+        padding: 15px 20px;
+        gap: 6px;                      /* Espacio entre elementos */
+    }
+
+    /* Asegura que el logo se mantenga en una sola línea y centrado */
+    .header-principal .logo {
+        white-space: nowrap;           /* Evita que el nombre se rompa */
+        font-size: 32px;
+        text-align: center;
+        flex-shrink: 0;                /* evita que se achique demasiado */
+    }
+
+    .nav-main {
+        display: flex;
+        justify-content: center;       /* Centro el menú */
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-main a {
+        font-size: 18px;               /* Legible en móvil */
+        padding: 6px;
+    }
+
+    .btn-reservar {
+        width: auto;
+        padding: 12px 20px;
+        margin-top: 6px;
+        font-size: 18px;
+    }
+    /* Mantener el título del hero en una sola línea */
+.hero .hero-text h1 {
+    white-space: nowrap;  /* evita que el texto salte a otra línea */
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .hero .hero-text h1 {
+        font-size: 26px;      /* reduce tamaño si es necesario */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero .hero-text h1 {
+        font-size: 32px;      /* tamaño intermedio para móviles/tables */
+    }
+}
+}
+
+/* Tamizado menor aún para celular muy pequeño */
+@media screen and (max-width: 480px) {
+    .header-principal .logo {
+        font-size: 30px; /* Un poco más pequeño para pantallas muy estrechas */
+    }
+}
+
+/* Ocultar botón "Reservar Ahora" del header en pantallas móviles */
+@media screen and (max-width: 768px) {
+    .header-principal .btn-reservar-mobile {
+        display: none;
+    }
+}
