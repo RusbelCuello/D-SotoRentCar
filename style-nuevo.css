@@ -1,0 +1,400 @@
+/* ======== VARIABLES Y ESTILOS BASE ======== */
+:root {
+  --color-primary: #f4c542;
+  --color-dark: #111;
+  --color-dark-bg: #1a1a1a;
+  --color-text: white;
+  --color-text-light: #f4f4f4;
+  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  --transition: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* ======== BOTONES ======== */
+button,
+.btn-reservar,
+.btn-reservar-mobile {
+  background: var(--color-primary);
+  border: none;
+  padding: 12px 26px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover,
+.btn-reservar:hover {
+  background: #e0b830;
+  transform: scale(1.05);
+}
+
+/* ======== HEADER ======== */
+.header-principal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ← clave */
+  padding: 15px 20px;
+  background: var(--color-dark);
+  box-shadow: var(--shadow);
+  position: relative;
+  gap: 15px;
+}
+
+.header-principal .logo {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  flex: 0 0 auto; /* que no se estire */
+  margin: 0;
+}
+
+.nav-main {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-main a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-main a:hover {
+  color: var(--color-primary);
+}
+
+/* ======== MENÚ HAMBURGUESA ======== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 12px 8px;
+  gap: 6px;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  width: 32px;
+  height: 3px;
+  background-color: var(--color-primary);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(12px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+/* ======== HERO ======== */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://siempreauto.com/wp-content/uploads/sites/9/2023/08/2024-Honda-CR-V-Sport-Touring.jpeg?w=1200");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text);
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* ======== INDICADOR SCROLL ======== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.scroll-indicator .arrow {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.scroll-indicator p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ======== VEHÍCULOS ======== */
+#vehiculos {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #f5f7fa;
+}
+
+.vehiculos-titulo {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.contenedor-autos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.carro {
+  background: white;
+  width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.carro img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.carro:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(244, 197, 66, 0.3);
+}
+
+.carro:hover img {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.carro h3 {
+  margin: 15px 0 5px;
+  font-size: 20px;
+}
+
+.carro p {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* ======== CONTACTO ======== */
+#contacto {
+  background: var(--color-dark);
+  color: var(--color-text);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#contacto p {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.instagram-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.instagram-link:hover {
+  opacity: 0.8;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #000;
+  color: var(--color-text);
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ======== RESPONSIVE MÓVIL ======== */
+@media screen and (max-width: 768px) {
+  :root {
+    --transition: 0.25s;
+  }
+
+  /* Header responsive */
+  .header-principal {
+    padding: 10px 15px;
+    justify-content: space-between;
+  }
+
+  .header-principal .logo {
+    font-size: 26px;
+    white-space: nowrap;
+    margin-right: 10px;
+  }
+
+  /* Menú hamburguesa visible */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menú desplegable */
+  .nav-main {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-dark);
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+    z-index: 100;
+    gap: 0;
+  }
+
+  .nav-main.show {
+    display: flex;
+  }
+
+  .nav-main a {
+    padding: 15px 0;
+    font-size: 16px;
+    margin: 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-main a:last-child {
+    border-bottom: none;
+  }
+
+  .btn-reservar-mobile {
+    display: block;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    color: black !important;
+  }
+
+  /* Hero responsive */
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Tarjetas responsive */
+  .carro {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .vehiculos-titulo {
+    font-size: 28px;
+  }
+
+  .contenedor-autos {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* Contacto responsive */
+  #vehiculos {
+    padding: 60px 15px;
+  }
+
+  #contacto {
+    padding: 40px 15px;
+  }
+
+  #contacto h2 {
+    font-size: 24px;
+  }
+
+  #contacto p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-principal .logo {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .vehiculos-titulo {
+    font-size: 24px;
+  }
+
+  .scroll-indicator p {
+    font-size: 12px;
+  }
+
+  .scroll-indicator .arrow {
+    font-size: 28px;
+  }
+}
